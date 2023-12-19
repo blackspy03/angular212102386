@@ -8,6 +8,7 @@ import { Dashboard3Component } from './dashboard3/dashboard3.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MahasiswaComponent } from './mahasiswa/mahasiswa.component';
 import { otentikasiGuard } from './otentikasi.guard';
+import { ForexComponent } from './forex/forex.component';
 
 const routes: Routes = [
   { path: 'admin', component: AdminComponent },
@@ -29,6 +30,7 @@ const routes: Routes = [
     component: MahasiswaComponent,
     canActivate: [otentikasiGuard],
   },
+  { path: 'forex', component: ForexComponent, canActivate: [otentikasiGuard] },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
 ];
 
