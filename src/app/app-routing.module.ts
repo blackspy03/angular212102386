@@ -8,6 +8,7 @@ import { Dashboard3Component } from './dashboard3/dashboard3.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MahasiswaComponent } from './mahasiswa/mahasiswa.component';
 import { otentikasiGuard } from './otentikasi.guard';
+import { CuacaComponent } from './cuaca/cuaca.component';
 import { ForexComponent } from './forex/forex.component';
 
 const routes: Routes = [
@@ -31,6 +32,7 @@ const routes: Routes = [
     canActivate: [otentikasiGuard],
   },
   { path: 'forex', component: ForexComponent, canActivate: [otentikasiGuard] },
+  { path: 'cuaca', component: CuacaComponent, canActivate: [otentikasiGuard] },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
 ];
 
